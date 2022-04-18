@@ -13,15 +13,15 @@ namespace DescartesJsonDiff.Controllers
     [Route("/v1/diff/")]
     public class DifferentialController : ControllerBase
     {
-        private readonly IDifferentialJsonService _differentialJsonService;
-        public DifferentialController(IDifferentialJsonService differentialJsonService)
+        private readonly IDifferentialService _differentialJsonService;
+        public DifferentialController(IDifferentialService differentialJsonService)
         {
             _differentialJsonService = differentialJsonService;
         }
 
         [HttpPut]
         [Route("{id}/left")]
-        public ActionResult<JsonResponse> CreateLeft(string id, [FromBody] JsonInput input)
+        public ActionResult<ApiResponse> CreateLeft(string id, [FromBody] ApiInput input)
         {
             if (input.data == null)
             {
@@ -35,7 +35,7 @@ namespace DescartesJsonDiff.Controllers
 
         [HttpPut]
         [Route("{id}/right")]
-        public ActionResult CreateRight(string id, [FromBody] JsonInput input)
+        public ActionResult CreateRight(string id, [FromBody] ApiInput input)
         {
             if (input.data == null)
             {
@@ -49,11 +49,11 @@ namespace DescartesJsonDiff.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        public ActionResult<JsonResponse> GetDifferential(string id)
+        public ActionResult<ApiResponse> GetDifferential(string id)
         {
             var result = _differentialJsonService.GetJsonDiff(id);
 
-            return new ObjectResult(result);
+            return new ObjectResult(result) { StatusCode = result == null? 404 : 200};
         }
 
     }

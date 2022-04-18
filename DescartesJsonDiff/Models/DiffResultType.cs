@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 
 namespace DescartesJsonDiff.Models
 {
-    public enum DiffResultType
+    public static class DiffResultType
     {
-        ContentDoNotMatch,
-        Equals,
-        SizeDoNotMatch
+        public const string ContentDoNotMatch = "ContentDoNotMatch";
+        public new const string Equals = "Equals";
+        public const string SizeDoNotMatch = "SizeDoNotMatch";
+
     }
 }
