@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DescartesJsonDiff", "DescartesJsonDiff\DescartesJsonDiff.csproj", "{82CD8714-BA3A-4E8A-8D76-BFCD9DD3C752}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DescartesJsonDiff", "DescartesJsonDiff\DescartesJsonDiff.csproj", "{82CD8714-BA3A-4E8A-8D76-BFCD9DD3C752}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DescartesJsonDiff.Testing", "DescartesJsonDiff.IntegrationTests\DescartesJsonDiff.Testing.csproj", "{C9B815B9-492F-44BF-B0C5-A8E66C2941DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{82CD8714-BA3A-4E8A-8D76-BFCD9DD3C752}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82CD8714-BA3A-4E8A-8D76-BFCD9DD3C752}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82CD8714-BA3A-4E8A-8D76-BFCD9DD3C752}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9B815B9-492F-44BF-B0C5-A8E66C2941DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9B815B9-492F-44BF-B0C5-A8E66C2941DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9B815B9-492F-44BF-B0C5-A8E66C2941DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9B815B9-492F-44BF-B0C5-A8E66C2941DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

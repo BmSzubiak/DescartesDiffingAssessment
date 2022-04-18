@@ -10,19 +10,14 @@ namespace DescartesJsonDiff.Models
     {
         private static readonly IMemoryCache _memoryCache = new MemoryCache(new MemoryCacheOptions());
 
-        public static void AddToCache(string key, string value)
+        public static void AddToCache(string key, byte[] value)
         {
             _memoryCache.Set(key, value);
         }
 
-        public static string GetFromCache(string key)
+        public static byte[] GetFromCache(string key)
         {
-            return _memoryCache.Get(key) as string;
-        }
-
-        public static void RemoveFromCache(string key)
-        {
-            _memoryCache.Remove(key);
+            return _memoryCache.Get(key) as byte[];
         }
     }
 }
